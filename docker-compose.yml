@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  sftp:
+    image: ichikawayukko/sftp
+    ports:
+      - "8022:22"
+    restart: always
+    environment:
+      - SSH_USER=ichikawayukko
+      - SSH_PASSWD=********
+#    volumes:
+#      - sftp-target:/opt  # Where you want to mount Docker volume
+
+#volumes:
+#  sftp-target:
+#    external:
+#      name: DOCKER_VOLUME_NAME # Witch Volume you want to sftp access?
